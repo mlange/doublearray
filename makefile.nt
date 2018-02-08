@@ -1,0 +1,16 @@
+!include $(RFIDDIR)\makefiles\StandardHeader.mk.win32
+
+APPNAME=rfidgateway
+
+OFILES=main.obj \
+       initialize.obj \
+       opto.obj \
+       photosensor.obj \
+       reader.obj \
+       registry.obj \
+       stacklight.obj 
+
+EXTRALIBS=opto.lib rfcode.lib tag.lib
+
+!include $(RFIDDIR)\makefiles\Application.mk.win32
+!include $(RFIDDIR)\makefiles\StandardFooter.mk.win32
